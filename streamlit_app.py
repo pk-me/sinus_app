@@ -17,9 +17,12 @@ A = st.sidebar.slider(
 lamb = st.sidebar.slider(
     "Period (λ) in µm", min_value=1.0, max_value=10.0, value=2.0, step=0.1
 )
-a = 0  # st.sidebar.slider("Start of Interval (a) in µm", min_value=0.0, max_value=10.0, value=0.0, step=0.1)
-b = 1  # st.sidebar.slider("End of Interval (b) in µm", min_value=0.0, max_value=10.0, value=1.0, step=0.1)
 
+
+#a = 0  # st.sidebar.slider("Start of Interval (a) in µm", min_value=0.0, max_value=10.0, value=0.0, step=0.1)
+#b = 1  # st.sidebar.slider("End of Interval (b) in µm", min_value=0.0, max_value=10.0, value=1.0, step=0.1)
+a = st.sidebar.number_input("Start of Interval (a) in µm", value=0.0)
+b = st.sidebar.number_input("End of Interval (b) in µm", value=1.0)
 
 # Define sine wave function
 def sine_wave(x, A, lamb):
