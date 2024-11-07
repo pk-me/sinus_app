@@ -23,7 +23,7 @@ b = 1  # st.sidebar.slider("End of Interval (b) in µm", min_value=0.0, max_valu
 
 # Define sine wave function
 def sine_wave(x, A, lamb):
-    return A / 2 * np.sin(2 * np.pi * x / lamb)
+    return A/2 * np.sin(2*np.pi*x/lamb)
 
 
 # Function to calculate arc length
@@ -56,7 +56,7 @@ st.plotly_chart(fig)
 # Calculate arc length and display it
 arc_length_value = sine_wave_arc_length(A, lamb, a, b)
 flat_line_length = b - a
-arc_length_ratio = arc_length_value / flat_line_length
+arc_length_ratio = arc_length_value * lamb / flat_line_length
 linear_approx = 2 * np.sqrt(A**2 + lamb**2 / 4)
 
 st.write(f"**Arc Length of Interval [{a}, {b}]:** {arc_length_value:.3f} µm")
