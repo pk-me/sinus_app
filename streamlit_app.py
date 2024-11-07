@@ -11,13 +11,14 @@ st.write(
 )
 
 # Input parameters
-A = st.sidebar.slider(
-    "Amplitude (A) in µm", min_value=0.1, max_value=2.0, value=1.0, step=0.1
-)
-lamb = st.sidebar.slider(
-    "Period (λ) in µm", min_value=1.0, max_value=10.0, value=2.0, step=0.1
-)
-
+#A = st.sidebar.slider(
+#    "Amplitude (A) in µm", min_value=0.1, max_value=2.0, value=1.0, step=0.1
+#)
+#lamb = st.sidebar.slider(
+#    "Period (λ) in µm", min_value=1.0, max_value=10.0, value=2.0, step=0.1
+#)
+A = st.sidebar.number_input("Amplitude (A) in µm", value=1.0)
+lamb = st.sidebar.number_input("Period (λ) in µm", value=2.0)
 
 #a = 0  # st.sidebar.slider("Start of Interval (a) in µm", min_value=0.0, max_value=10.0, value=0.0, step=0.1)
 #b = 1  # st.sidebar.slider("End of Interval (b) in µm", min_value=0.0, max_value=10.0, value=1.0, step=0.1)
