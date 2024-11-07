@@ -59,10 +59,10 @@ st.plotly_chart(fig)
 
 # Calculate arc length and display it
 arc_length_value = sine_wave_arc_length(A, lamb, a, b)
-ya = sine_wave(a, A, lamb)
-yb = sine_wave(b, A, lamb)
+#ya = sine_wave(a, A, lamb)
+#yb = sine_wave(b, A, lamb)
 
-flat_line_length = np.sqrt((b - a)**2+(yb-ya)**2)
+flat_line_length = np.sqrt((b - a)**2)
 arc_length_ratio = arc_length_value / flat_line_length
 linear_approx = 2 * np.sqrt(A**2 + lamb**2 / 4)
 
